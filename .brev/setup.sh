@@ -96,14 +96,8 @@ sed -i "s/^PROMPT=.*/PROMPT=\"%{\$fg_bold[cyan]%}$name %(?:%{\$fg_bold[green]%}â
 (echo ""; echo "##### Python + Pip + Poetry #####"; echo "";)
 sudo apt-get install -y python3-distutils
 sudo apt-get install -y python3-apt
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
+curl -sSL https://install.python-poetry.org | python3 -
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python3 get-pip.py
 rm get-pip.py
-echo "" >> ~/.zshrc
-echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.zshrc
-echo "" >> ~/.bashrc
-echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc
-source ~/.zshrc
-source ~/.bashrc
-source $HOME/.poetry/env
+
